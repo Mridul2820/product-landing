@@ -1,22 +1,27 @@
-import React from 'react'
-import { FaMagento } from 'react-icons/fa'
+import React, { useState } from 'react'
+import { FaBars, FaMagento, FaTimes } from 'react-icons/fa'
+import { IconContext } from 'react-icons/lib'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { StyledContainer } from "../components/GlobalStyles";
 
 const Navbar = () => {
+    const [click, setClick] = useState(false)
+
     return (
-        <>
+        <IconContext.Provider value={{color: '#fff'}}>
             <StyledNav>
                 <StyledNavBar>
                     <StyledLogo to='/'>
-                        <StyledIcon>
-                            ULTRA
-                        </StyledIcon>
+                        <StyledIcon/>
+                        ULTRA
                     </StyledLogo>
+                    <StyledMobIcon onClick={() => setClick(!click)} >
+                        {click ? <FaTimes/> : <FaBars />}
+                    </StyledMobIcon>
                 </StyledNavBar>
             </StyledNav>
-        </>
+        </IconContext.Provider>
     )
 }
 
@@ -40,7 +45,7 @@ const StyledNavBar = styled(StyledContainer)`
     ${StyledContainer}
 `
 
-const StyledLogo = styled.a`
+const StyledLogo = styled(Link)`
     color: #fff;
     justify-self: flex-start;
     cursor: pointer;
@@ -52,6 +57,20 @@ const StyledLogo = styled.a`
 
 const StyledIcon = styled(FaMagento)`
     margin-right: 0.5rem;
+`
+
+const StyledMobIcon = styled.div`
+    display: none;
+
+    @media screen and (max-width: 960px) {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
 `
 
 export default Navbar
