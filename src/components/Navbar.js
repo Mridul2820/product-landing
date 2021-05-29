@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import styled from 'styled-components';
 import { FaBars, FaMagento, FaTimes } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import { StyledContainer, StyledButton } from "../components/GlobalStyles";
 
 const Navbar = () => {
