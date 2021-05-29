@@ -21,4 +21,27 @@ export const StyledContainer = styled.div`
     }
 `
 
+export const StyledButton = styled.button`
+    border-radius: 4px;
+    white-space: nowrap;
+    background: ${({ primary }) => (primary ? '#4b59f7' : '#0467fb')};
+    padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
+    font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease-out;
+
+    &:hover {
+        background: #fff;
+        background: ${({ primary }) => (primary ? '#0467fb' : '#4b59f7')};
+    }
+
+    @media screen and (max-width: 960px) {
+        width: 100%;
+    }
+`
+
+
 export default GlobalStyle
