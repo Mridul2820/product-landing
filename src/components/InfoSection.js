@@ -12,7 +12,10 @@ const InfoSection = ({
     headline,
     lightTextDesc,
     description,
-    buttonLabel
+    buttonLabel,
+    img,
+    alt,
+    flexStart
 }) => {
     return (
         <StyledInfoSec lightBg={lightBg}>
@@ -36,6 +39,11 @@ const InfoSection = ({
                             </Link>
                         </StyledTextWrap>
                     </StyledInfoCol>
+                    <StyledInfoCol>
+                        <StyledImgWrap flexStart={flexStart}>
+                            <img src={img.default} alt={alt} />
+                        </StyledImgWrap>
+                    </StyledInfoCol>
                 </StyledInfoRow>
             </StyledContainer>
         </StyledInfoSec>
@@ -44,13 +52,21 @@ const InfoSection = ({
 
 const StyledInfoSec = styled.div`
     color: #fff;
-    padding: 160px 0;
+    padding: 140px 0;
     background: ${({ lightBg }) => (lightBg ? '#fff' : '#101522')};
+
+    @media screen and (max-width: 768px) {
+        padding: 100px 0;
+    }
+
+    @media screen and (max-width: 425px) {
+        padding: 50px 0;
+    }
 `
 
 const StyledInfoRow = styled.div`
     display: flex;
-    flex-direction: ${({ imgStart }) => imgStart ? 'column' : 'row' };
+    flex-direction: ${({ imgStart }) => imgStart ? 'row-reverse' : 'row' };
     align-items: center;
     flex-wrap: wrap;
     margin: 0 -15px -15px -15px;
@@ -82,7 +98,7 @@ const StyledTextWrap = styled.div`
     }
 `
 
-const StyledTopLine = styled.div`
+const StyledTopLine = styled.h3`
     color: ${({lightTopLine}) => (lightTopLine ? '#a9b3c1' : '#4b59f7' )};
     font-size: 18px;
     line-height: 16px;
@@ -95,6 +111,10 @@ const StyledHeading = styled.h1`
     font-size: 48px;
     line-height: 1.1;
     color: ${({lightText}) => (lightText ? '#f7f8fa' : '#1c2237' )};
+
+    @media screen and (max-width: 425px) {
+        font-size: 35px;
+    }
 `
 const StyledSubTitle = styled.p`
     max-width: 440px;
@@ -102,6 +122,20 @@ const StyledSubTitle = styled.p`
     font-size: 18px;
     line-height: 24px;
     color: ${({lightTextDesc}) => (lightTextDesc ? '#a9b3c1' : '#1c2237' )};
+`
+
+const StyledImgWrap = styled.div`
+    max-width: 555px;
+    display: flex;
+    justify-content: ${({ flexStart }) => (flexStart ? 'flex-start' : 'flex-end' )};
+
+    img {
+        padding-right: 0;
+        max-width: 100%;
+        vertical-align: middle;
+        display: inline-block;
+        max-height: 500px;
+    }
 `
 
 export default InfoSection
