@@ -36,7 +36,6 @@ const PricingCard = styled(Link)`
     box-shadow: 3px 6px 20px rgba(0, 0, 0, 0.5);
     width: 280px;
     height: 460px;
-    text-decoration: none;
     border-radius: 4px;
     display: flex;
     flex-direction: column;

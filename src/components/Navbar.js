@@ -107,7 +107,6 @@ const StyledLogo = styled(Link)`
     color: #fff;
     justify-self: flex-start;
     cursor: pointer;
-    text-decoration: none;
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -171,7 +170,6 @@ const StyledNavLink = styled(Link)`
     color: #fff;
     display: flex;
     align-items: center;
-    text-decoration: none;
     padding: .5rem 1rem;
     height: 100%;
 
@@ -201,7 +199,6 @@ const StyledNavBtnLink = styled(Link)`
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
     padding: 8px 16px;
     height: 100%;
     width: 100%;

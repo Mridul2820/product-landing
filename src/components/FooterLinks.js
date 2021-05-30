@@ -74,7 +74,6 @@ const FooterLinkd = styled.div`
 
 const FooterLink = styled(Link)`
     color: #fff;
-    text-decoration: none;
     margin-bottom: 0.5rem;
 
     @media screen and (max-width: 425px) {

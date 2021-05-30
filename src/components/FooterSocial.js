@@ -61,7 +61,6 @@ const SocialLogo = styled(Link)`
     color: #fff;
     justify-self: start;
     cursor: pointer;
-    text-decoration: none;
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -77,7 +76,6 @@ const WebsiteRights = styled.p`
     margin-bottom: 16px;
 
     a {
-        text-decoration: none;
         color: #fff;
         margin-left: 5px;
     }
