@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Footer from './components/Footer'
 import GlobalStyle from './components/GlobalStyles'
 
 // Components & Pages
@@ -14,6 +15,7 @@ const App = () => {
             <Switch>
                 <Route path="/" exact component={HomePage}/>
             </Switch>
+            <Footer />
         </Router>
     )
 }
