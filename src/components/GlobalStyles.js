@@ -7,6 +7,14 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Source Sans Pro', sans-serif;
     }
+
+    body {
+        scroll-behavior: smooth;
+    }
+
+    a {
+        text-decoration: none;
+    }
 `
 
 export const StyledContainer = styled.div`
