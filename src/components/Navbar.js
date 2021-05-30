@@ -53,6 +53,13 @@ const Navbar = () => {
                                 Products
                             </StyledNavLink>
                         </StyledNavItem>
+
+                        <StyledNavItem>
+                            <StyledNavLink to="/pricing" >
+                                Pricing
+                            </StyledNavLink>
+                        </StyledNavItem>
+
                         <StyledNavBtn>
                             {button ? (
                                 <StyledNavBtnLink to="/signup">

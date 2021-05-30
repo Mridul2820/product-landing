@@ -6,6 +6,7 @@ import GlobalStyle from './components/GlobalStyles'
 // Components & Pages
 import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
+import Pricing from './pages/Pricing'
 
 const App = () => {
     return (
@@ -14,6 +15,9 @@ const App = () => {
             <Navbar />
             <Switch>
                 <Route path="/" exact component={HomePage}/>
+            </Switch>
+            <Switch>
+                <Route path="/pricing" exact component={Pricing}/>
             </Switch>
             <Footer />
         </Router>

@@ -24,15 +24,15 @@ const FooterSocial = () => {
                     </a> 
                 </WebsiteRights>
                 <SocialIcons>
-                    <a href='https://github.com/Mridul2820' target='_blank' aria-label='Github'>
+                    <a href='https://github.com/Mridul2820' rel="noreferrer" target='_blank' aria-label='Github'>
                         <FaGithub />
                     </a>
 
-                    <a href='https://www.instagram.com/i_mridul/' target='_blank' aria-label='Instagram'>
+                    <a href='https://www.instagram.com/i_mridul/' target='_blank' rel="noreferrer" aria-label='Instagram'>
                         <FaInstagram />
                     </a>
 
-                    <a href='https://twitter.com/i_mridul' target='_blank' aria-label='Twitter'>
+                    <a href='https://twitter.com/i_mridul' rel="noreferrer" target='_blank' aria-label='Twitter'>
                         <FaTwitter />
                     </a>
                 </SocialIcons>
