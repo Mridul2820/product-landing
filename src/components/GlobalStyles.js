@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Source Sans Pro', sans-serif;
     }
 
-    body {
+    html {
         scroll-behavior: smooth;
     }
 
