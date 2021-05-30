@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components';
 import { StyledButton } from '../components/GlobalStyles';
 
+import { AiFillLinkedin, AiFillFacebook, AiFillGoogleCircle } from 'react-icons/ai'
+
 const SignUp = () => {
     const [leftActive, setLeftActive] = useState(true)
 
@@ -10,17 +12,34 @@ const SignUp = () => {
             <SignUpContainer leftActive={leftActive}>
                 <StyledFrom>
                     <h1>Create Account</h1>
+
+                    <SocialContainer>
+                        <AiFillGoogleCircle />
+                        <AiFillFacebook />
+                        <AiFillLinkedin />
+                    </SocialContainer>
+                    <span>or use your email for registration</span>
+
                     <input type="text" placeholder="Name" />
                     <input type="email" placeholder="Email" />
                     <input type="password" placeholder="Password" />
+
                     <StyledButton className="sign-up-button">Sign Up</StyledButton>
                 </StyledFrom>
             </SignUpContainer>
             <SignInContainer leftActive={leftActive}>
                 <StyledFrom>
                     <h1>Sign In</h1>
+
+                    <SocialContainer>
+                        <AiFillGoogleCircle />
+                        <AiFillFacebook />
+                        <AiFillLinkedin />
+                    </SocialContainer>
+                    <span>or use your account</span>
+
                     <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
+                    <input type="password" placeholder="Password"  />
                     <a href="/">Forgot your password?</a>
                     <StyledButton>Sign In</StyledButton>
                 </StyledFrom>
@@ -148,6 +167,16 @@ const StyledFrom = styled.form`
         width: 100%;
         margin: 5px 0;
     }
+`
+
+const SocialContainer = styled.div`
+    font-size: 27px;
+    color: #101522;
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 20px;
 `
 
 const OverlayWrap = styled.div`
