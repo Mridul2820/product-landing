@@ -65,4 +65,3 @@ export const homeObjFour = {
     flexStart: true,
     paddingBig: true
 };
-  

@@ -14,7 +14,7 @@ const PricingSingle = ({
     moto
 }) => {
     return (
-        <PricingCard to='/sign-up'>
+        <PricingCard to='/signup'>
             <PricingCardIcon>
                 {icon}
             </PricingCardIcon>

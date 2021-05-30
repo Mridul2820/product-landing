@@ -10,6 +10,7 @@ import ScrollToTop from './components/ScrollToTop'
 import { homeObjTwo, homeObjThree } from './data/HomeData'
 import HomePage from './pages/HomePage'
 import Pricing from './pages/Pricing'
+import SignUp from './pages/SignUp'
 
 const App = () => {
     return (
@@ -32,6 +33,9 @@ const App = () => {
             </Switch>
             <Switch>
                 <Route path="/pricing" component={Pricing}/>
+            </Switch>
+            <Switch>
+                <Route path="/signup" component={SignUp}/>
             </Switch>
             <Footer />
         </Router>
