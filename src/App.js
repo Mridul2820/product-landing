@@ -7,7 +7,7 @@ import InfoSection from './components/InfoSection'
 // Components & Pages
 import Navbar from './components/Navbar'
 import ScrollToTop from './components/ScrollToTop'
-import { homeObjOne, homeObjTwo } from './data/HomeData'
+import { homeObjTwo, homeObjThree } from './data/HomeData'
 import HomePage from './pages/HomePage'
 import Pricing from './pages/Pricing'
 
@@ -22,12 +22,12 @@ const App = () => {
             </Switch>
             <Switch>
                 <Route path="/services">
-                    <InfoSection {...homeObjOne} />
+                    <InfoSection {...homeObjTwo} />
                 </Route>
             </Switch>
             <Switch>
                 <Route path="/products">
-                    <InfoSection {...homeObjTwo} />
+                    <InfoSection {...homeObjThree} />
                 </Route>
             </Switch>
             <Switch>

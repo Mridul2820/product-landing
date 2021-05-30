@@ -11,7 +11,8 @@ export const homeObjOne = {
     imgStart: '',
     img: require('../images/svg-1.svg'),
     alt: 'Credit Card',
-    flexStart: false
+    flexStart: false,
+    paddingBig: true
 };
 
 export const homeObjTwo = {
@@ -27,7 +28,8 @@ export const homeObjTwo = {
     imgStart: 'start',
     img: require('../images/profile.jpg'),
     alt: 'Vault',
-    flexStart: true
+    flexStart: true,
+    paddingBig: false
 };
   
 export const homeObjThree = {
@@ -43,7 +45,8 @@ export const homeObjThree = {
     imgStart: '',
     img: require('../images/svg-2.svg'),
     alt: 'Vault',
-    flexStart: false
+    flexStart: false,
+    paddingBig: true
 };
   
 export const homeObjFour = {
@@ -59,6 +62,7 @@ export const homeObjFour = {
     imgStart: 'start',
     img: require('../images/svg-3.svg'),
     alt: 'Vault',
-    flexStart: true
+    flexStart: true,
+    paddingBig: true
 };
   

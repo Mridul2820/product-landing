@@ -15,10 +15,11 @@ const InfoSection = ({
     buttonLabel,
     img,
     alt,
-    flexStart
+    flexStart,
+    paddingBig
 }) => {
     return (
-        <StyledInfoSec lightBg={lightBg}>
+        <StyledInfoSec lightBg={lightBg} paddingBig={paddingBig}>
             <StyledContainer>
                 <StyledInfoRow imgStart={imgStart}>
                     <StyledInfoCol>
@@ -52,8 +53,8 @@ const InfoSection = ({
 
 const StyledInfoSec = styled.div`
     color: #fff;
-    padding: 140px 0;
     background: ${({ lightBg }) => (lightBg ? '#fff' : '#101522')};
+    padding: ${({ paddingBig }) => (paddingBig ? '130px 0' : '70px 0')};
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
