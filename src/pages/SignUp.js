@@ -85,9 +85,8 @@ const SignContainer = styled.div`
 
     @media screen and (max-width: 425px) {
         height: 100%;
-        min-height: 100%;
+        min-height: 750px;
         margin: 30px auto;
-        box-shadow: none;
     }
 
     ${StyledButton} {
@@ -107,8 +106,10 @@ const SignUpContainer = styled.div`
     transform: ${({leftActive}) => leftActive ? '' : 'translateX(100%)'} ;
 
     @media screen and (max-width: 425px) {
-        position: relative;
         width: 100%;
+        height: 50%;
+        transform: translateX(0);
+        transform: ${({leftActive}) => leftActive ? '' : 'translateY(100%)'} ;
     }
 `
 const SignInContainer = styled.div`
@@ -125,11 +126,10 @@ const SignInContainer = styled.div`
     z-index: ${({leftActive}) => leftActive ? '1' : '5'} ;
 
     @media screen and (max-width: 425px) {
-        position: relative;
         width: 100%;
-        visibility: visible;
-        opacity: 1;
-        border-top: 2px solid #101522;
+        height: 50%;
+        transform: translateX(0);
+        transform: ${({leftActive}) => leftActive ? '' : 'translateY(100%)'} ;
     }
 `
 
@@ -191,7 +191,12 @@ const OverlayWrap = styled.div`
     transform: ${({leftActive}) => leftActive ? '' : 'translateX(-100%)'} ;
 
     @media screen and (max-width: 425px) {
-        display: none;
+        height : 50%;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        transform: translateX(0);
+        transform: ${({leftActive}) => leftActive ? '' : 'translateY(-100%)'} ;
     }
 `
 
@@ -205,6 +210,15 @@ const Overlay = styled.div`
     transform: translateX(0);
     transition: transform .6s ease-in-out;
     transform: ${({leftActive}) => leftActive ? '' : 'translateX(50%)'} ;
+    
+    @media screen and (max-width: 425px) {
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        transform: translateX(0);
+        transform: ${({leftActive}) => leftActive ? '' : 'translateY(50%)'} ;
+    }
 
     h1 {
         font-weight: bold;
@@ -233,6 +247,13 @@ const OverlayLeft = styled.div`
     @media screen and (max-width: 550px) {
         padding: 0 20px;
     }
+
+    @media screen and (max-width: 425px) {
+        transform: translateX(0);
+        transform: ${({leftActive}) => leftActive ? 'translateY(-20%)' : 'translateY(0)'} ;
+        width: 100%;
+        height: 50%;
+    }
 `
 
 const OverlayRight = styled.div`
@@ -253,6 +274,15 @@ const OverlayRight = styled.div`
 
     @media screen and (max-width: 550px) {
         padding: 0 20px;
+    }
+
+    @media screen and (max-width: 425px) {
+        width: 100%;
+        height: 50%;
+        top: unset;
+        bottom: 0;
+        transform: translateX(0);
+        transform: ${({leftActive}) => leftActive ? 'translateY(0%)' : 'translateY(20%)'} ;
     }
 `
 
