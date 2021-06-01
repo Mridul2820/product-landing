@@ -36,31 +36,31 @@ const Navbar = () => {
                         {click ? <FaTimes/> : <FaBars />}
                     </StyledMobIcon>
                     <StyledNavMenu click={click} >
-                        <StyledNavItem>
+                        <StyledNavItem onClick={() => setClick(!click)} >
                             <StyledNavLink to="/">
                                 Home
                             </StyledNavLink>
                         </StyledNavItem>
 
-                        <StyledNavItem>
+                        <StyledNavItem onClick={() => setClick(!click)} >
                             <StyledNavLink to="/services" >
                                 Services
                             </StyledNavLink>
                         </StyledNavItem>
                     
-                        <StyledNavItem>
+                        <StyledNavItem onClick={() => setClick(!click)} >
                             <StyledNavLink to="/products" >
                                 Products
                             </StyledNavLink>
                         </StyledNavItem>
 
-                        <StyledNavItem>
+                        <StyledNavItem onClick={() => setClick(!click)} >
                             <StyledNavLink to="/pricing" >
                                 Pricing
                             </StyledNavLink>
                         </StyledNavItem>
 
-                        <StyledNavBtn>
+                        <StyledNavBtn onClick={() => setClick(!click)} >
                             {button ? (
                                 <StyledNavBtnLink to="/signup">
                                     <StyledButton primary>
